@@ -64,7 +64,7 @@ def calculate_zscore(df):
 
 
 def main():
-    file_path = '../data/benin-malanville.csv'
+    file_path = ''
     df = load_data(file_path)
     explore_data(df)
     convert_datatypes(df)
