@@ -2,11 +2,6 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-def load_data(filepath):
-    """Load CSV file into a DataFrame."""
-    df = pd.read_csv(filepath)
-    return df
-
 def plot_boxplot(df, metric, countries):
     """Generate a boxplot for a selected metric and countries."""
     df_filtered = df[df['Country'].isin(countries)]
@@ -32,4 +27,3 @@ def top_regions(df, metric, countries):
     df_filtered = df[df['Country'].isin(countries)]
     top = df_filtered.groupby('Country')[metric].mean().sort_values(ascending=False)
     return top
-
